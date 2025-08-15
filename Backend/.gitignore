@@ -1,0 +1,36 @@
+To secure your backend server and prevent sensitive information from being committed to Git, you should create a `.gitignore` file. This file tells Git to ignore certain files and directories.
+
+### Common .gitignore for Backend Servers
+
+Here is a standard `.gitignore` file for a backend server that handles common files and directories containing sensitive data or temporary build artifacts.
+
+```
+# Dependency directories
+/node_modules
+/vendor
+/build
+/dist
+
+# Environment variables and sensitive data
+.env
+.env.production
+.env.local
+config.js
+credentials.json
+/secrets/
+/uploads/
+*.pem
+*.key
+
+# Log files and temporary files
+*.log
+npm-debug.log*
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Database files
+*.sqlite3
+/db.sqlite
+/db/
